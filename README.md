@@ -1,2 +1,26 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/i3y96r7S)
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=22845955)
+# Sockets to Server Quiz Game
+
+A client-server quiz application using Python sockets. The server hosts a quiz game with 25 questions, while the client connects to play and receive scoring feedback.
+
+## Server (`server.py`)
+
+- Listens on `0.0.0.0:5000` for incoming connections
+- Randomly selects quiz questions from a pool of 25
+- Scores responses: +5 points for correct, -5 for incorrect
+- Tracks and reports the player's score after each question
+
+## Client (`client.py`)
+
+- Prompts user for server IP address (defaults to localhost)
+- Connects to the server with a 5-second timeout
+- Receives welcome message and quiz questions
+- Accepts user input for answers
+- Displays feedback and score updates
+- Includes error handling for connection failures
+
+## Running the Programs
+
+1. Start the server: `python server.py`
+2. In another terminal, run the client: `python client.py`
+3. Enter the server IP when prompted (or press Enter for localhost)
+4. Answer each question with a whole number and press Enter
